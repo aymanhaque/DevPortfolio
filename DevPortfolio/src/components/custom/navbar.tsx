@@ -1,8 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
-import { CiLight } from "react-icons/ci";
-import { FaMoon } from "react-icons/fa";
 import { Button } from '../ui/button';
 
 const border = () => {
