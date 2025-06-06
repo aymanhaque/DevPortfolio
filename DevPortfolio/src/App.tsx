@@ -1,6 +1,6 @@
 import About from './components/custom/about'
 import Navbar from './components/custom/navbar'
-
+import Skills from './components/custom/skills'
 
 const stuff = () => {
   return (
@@ -81,8 +81,9 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className='flex max-w-screen-2xl mx-auto mt-80'>
+      <div className='max-w-screen-2xl mx-auto mt-55'>
         <About/>
+        <Skills/>
       </div>
       
     </>
