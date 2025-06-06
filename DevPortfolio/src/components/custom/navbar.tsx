@@ -33,10 +33,10 @@ const Navbar = () => {
                     <Button variant ="color"asChild>
                         <a href="">Contact</a>
                     </Button>
-                    {border()}
+                    {/* {border()}
                     <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" href="">
                         <FaMoon size={22}></FaMoon>
-                    </a>
+                    </a> */}
                     {border()}
                     <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" 
                         href="https://github.com/aymanhaque">

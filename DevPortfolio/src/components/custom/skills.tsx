@@ -1,49 +1,38 @@
 import React from 'react';
 import { FaPython,FaReact,FaNode, FaJava} from 'react-icons/fa';
 import { SiFlask, SiMongodb, SiSpringboot } from 'react-icons/si';
-import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi';
+import { BiLogoPostgresql } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { motion } from 'framer-motion';
 
-const logoSize = 40;
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
-const Box: React.FC<{ children: React.ReactNode; idx: number; name: string; description: string; icon: React.ReactNode; link: string }> = ({ children, idx, name, description, icon, link }) => {
+const logoSize = 40;
+
+const Box: React.FC<{ children: React.ReactNode; idx: number; name: string; description: string; link: string }> = ({ children, idx, name, description, link }) => {
     return (
-        <Sheet>
-            <SheetTrigger asChild className='text-neutral-50'>
+        <HoverCard>
+            <HoverCardTrigger asChild className='text-neutral-50'>
                 <motion.div
                     className='w-20 aspect-square rounded-md bg-zinc-900 text-neutral-200 flex 
                                 justify-center items-center hover:scale-110 transition-transform duration-300
-                                border-1 border-zinc-800 m-5'
+                                border-1 border-zinc-600 m-5'
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                 >
                     {children}
                 </motion.div>
-            </SheetTrigger>
-            <SheetContent>
-                <div className="flex flex-col items-center mb-4 m-5 ">
-                    <span className="mb-2">{icon}</span>
-                </div>
-                <SheetHeader>
-                    <SheetTitle>
-                        <a href={link} target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400">{name}</a>
-                    </SheetTitle>
-                    <SheetDescription>
-                        {description}
-                    </SheetDescription>
-                </SheetHeader>
-            </SheetContent>
-        </Sheet>
+            </HoverCardTrigger>
+            <HoverCardContent>
+                <a className='text-zinc-400 underline' href={link}>{name}</a>
+                 – {description}.
+            </HoverCardContent>
+        </HoverCard>
     )
 }
 
@@ -115,13 +104,14 @@ const Skills: React.FC = () => {
                         idx={idx}
                         name={item.name}
                         description={item.description}
-                        icon={item.icon}
                         link={item.link}
                     >
                         {item.icon}
                     </Box>
                 ))}
             </div>
+
+            
         </div>
     );
 };
