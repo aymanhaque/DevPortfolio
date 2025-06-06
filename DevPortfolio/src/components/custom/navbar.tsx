@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa6";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import { Button } from '../ui/button';
@@ -38,14 +38,17 @@ const Navbar = () => {
                         <FaMoon size={22}></FaMoon>
                     </a>
                     {border()}
-                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" href="">
+                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" 
+                        href="https://github.com/aymanhaque">
                         <FaGithub size={22}></FaGithub>
                     </a>
-                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" href="">
+                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" 
+                        href="https://www.linkedin.com/in/muhd-haque-prof">
                         <FaLinkedin size={22}></FaLinkedin>
                     </a>
-                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" href="">
-                        <FaDiscord size={22}></FaDiscord>
+                    <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" 
+                        href="mailto:muhd.ayman.haque@gmail.com">
+                        <MdEmail size={22}></MdEmail>
                     </a>
                 </div>
             </div>

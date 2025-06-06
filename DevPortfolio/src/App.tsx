@@ -1,6 +1,5 @@
 import About from './components/custom/about'
 import Navbar from './components/custom/navbar'
-import './index.css'
 
 
 const stuff = () => {
@@ -82,11 +81,8 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className='flex justify-center h-screen bg-zinc-950 '>
-        <div className='mt-70'>
+      <div className='flex max-w-screen-2xl mx-auto mt-80'>
         <About/>
-
-        </div>
       </div>
       
     </>

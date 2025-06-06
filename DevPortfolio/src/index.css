@@ -1,3 +1,7 @@
+body {
+  background-color: #09090b; /* Match your design */
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -118,3 +122,4 @@
     @apply bg-background text-foreground;
   }
 }
+
