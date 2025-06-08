@@ -11,19 +11,19 @@ const cardItems = [
         imgSrc: "https://github.com/acm-projects/Harmoni/blob/main/frontEnd/img/harmoni.png?raw=true",
         title: "Harmoni",
         description: "A social media app where people can create groups, sync calendars, and find overlapping free times for event planning",
-        link: "https://github.com/aymanhaque/weather-app"
+        link: "https://github.com/acm-projects/Harmoni"
     },
     {
         imgSrc: "https://github.com/fintechutd/roboAdvisorMaster/blob/main/Frontend/robo-advisor/src/assets/fintechLogo.png?raw=true",
         title: "Robo Advisor",
         description: "AI-powered financial advisor that provides personalized investment recommendations based on user preferences and market trends.",
-        link: "https://github.com/aymanhaque/weather-app"
+        link: "https://github.com/fintechutd/roboAdvisorMaster"
     },
     {
         imgSrc: "https://storage.googleapis.com/kaggle-datasets-images/1869236/3053020/65e790e04b6c5be05e05e1a36d6bc272/dataset-card.png?t=2022-01-17-10-05-13?t=2022-01-20-05-34-06",
         title: "CyberBully Detector",
         description: "Logic-based detector that detects cyberbullying in chat messages, helping to create safer online environments.",
-        link: "https://github.com/aymanhaque/weather-app"
+        link: "https://github.com/manthranatarajan/HackReason2025"
     },
 ];
 
