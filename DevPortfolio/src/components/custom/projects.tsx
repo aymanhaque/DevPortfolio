@@ -24,7 +24,7 @@ const cardItems = [
         title: "CyberBully Detector",
         description: "Logic-based detector that detects cyberbullying in chat messages, helping to create safer online environments.",
         link: "https://github.com/manthranatarajan/HackReason2025"
-    },
+  },
 ];
 
 const Projects = () => {
