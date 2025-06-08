@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPython,FaReact,FaNode, FaJava} from 'react-icons/fa';
+import { FaPython,FaReact,FaNode, FaJava, FaDocker} from 'react-icons/fa';
 import { SiFlask, SiMongodb, SiSpringboot } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
@@ -37,6 +37,11 @@ const Box: React.FC<{ children: React.ReactNode; idx: number; name: string; desc
 }
 
 const skillItems = [
+    {name:"",description:"",link:"",icon:<></>},
+    {name:"",description:"",link:"",icon:<></>},
+    {name:"",description:"",link:"",icon:<></>},
+    {name:"",description:"",link:"",icon:<></>},
+    
     {
         icon: <FaPython size={logoSize}/>,
         name: "Python",
@@ -91,25 +96,34 @@ const skillItems = [
         description: "A NoSQL database known for its flexibility and scalability with JSON-like documents.",
         link: "https://www.mongodb.com/"
     },
+    {
+        icon: <FaDocker size={logoSize}/>,
+        name: "Docker",
+        description: "A platform for developing, shipping, and running applications in lightweight containers.",
+        link: "https://www.docker.com/"
+    },
+    {name:"",description:"",link:"",icon:<></>},
+    {name:"",description:"",link:"",icon:<></>},
+    {name:"",description:"",link:"",icon:<></>},
 ];
 
 const Skills: React.FC = () => {
     return (
         <div className='mt-130 w-full'>
             <h1 className='text-7xl text-neutral-200 flex justify-center mb-5'>Skills</h1>
-            <div className='flex justify-center'>
-                {skillItems.map((item, idx) => (
-                    <Box
-                        key={idx}
-                        idx={idx}
-                        name={item.name}
-                        description={item.description}
-                        link={item.link}
-                    >
-                        {item.icon}
-                    </Box>
-                ))}
-            </div>
+            <div className='flex flex-wrap w-full gap-x-6 gap-y-8 justify-center'>
+    {skillItems.map((item, idx) => (
+        <Box
+            key={idx}
+            idx={idx}
+            name={item.name}
+            description={item.description}
+            link={item.link}
+        >
+            {item.icon}
+        </Box>
+    ))}
+</div>
 
             
         </div>

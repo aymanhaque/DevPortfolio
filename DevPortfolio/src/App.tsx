@@ -9,10 +9,14 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className='max-w-screen-2xl mx-auto mt-110'>
+      <div className='w-full mx-auto mt-110'>
+        <div className='max-w-screen-2xl mx-auto'>
         <About/>
-        <Skills/>
-        <Projects/>
+        </div>
+          <Skills/>
+          <div className='max-w-screen-2xl mx-auto'>
+            <Projects/>
+          </div>
       </div>
       
     </>
