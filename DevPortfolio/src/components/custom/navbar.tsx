@@ -11,7 +11,7 @@ const border = () => {
 
 const Navbar = () => {
     return (
-        <nav className='fixed top-0 left-0 w-full p-1  bg-zinc-950 opacity-90 border-b-1 backdrop border-gray-600'>
+        <nav className='fixed z-50 top-0 left-0 w-full p-1 bg-zinc-950 opacity-90 border-b-1 backdrop border-gray-600'>
             <div className='max-w-7xl mx-auto px-4 py-2 flex justify-between items-center'>
                 <div className="flex w-full items-center">
                     <Button variant="heading" asChild>
