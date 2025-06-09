@@ -73,8 +73,8 @@ const Skills: React.FC = () => {
             <div 
               className='flex flex-wrap w-full gap-x-1 gap-y-8 justify-center '
               style={{
-                maskImage: "linear-gradient(to bottom, transparent, black 60%, black 50%, transparent)",
-                WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)"
+                maskImage: "linear-gradient(to bottom, transparent, black 50%, black 50%, transparent)",
+                WebkitMaskImage: "linear-gradient(to bottom, transparent, black 40%, black 20%, transparent)"
               }}
             >
                 {renderEmptyBoxes()}
