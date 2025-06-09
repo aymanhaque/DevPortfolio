@@ -1,5 +1,5 @@
 import { FaPython,FaReact,FaNode, FaJava, FaDocker} from 'react-icons/fa';
-import { SiFlask, SiMongodb, SiSpringboot } from 'react-icons/si';
+import { SiExpress, SiFlask, SiLangchain, SiMongodb, SiSpringboot } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
 const logoSize = 40; // Size for the icons
@@ -9,7 +9,14 @@ const skillItems = [
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
+
+
+    {
+        icon: <SiExpress size={logoSize}/>,
+        name: "ExpressJS",
+        description: "Lightweight javascript web framework for building server side applications.",
+        link: "https://www.python.org/"
+    },
     
 
     {
@@ -21,7 +28,7 @@ const skillItems = [
     {
         icon: <FaReact size={logoSize}/>,
         name: "React",
-        description: "A popular JavaScript library for building user interfaces, especially single-page applications.",
+        description: "JavaScript library for building user interfaces, especially single-page applications.",
         link: "https://react.dev/"
     },
     {
@@ -72,7 +79,13 @@ const skillItems = [
         description: "A platform for developing, shipping, and running applications in lightweight containers.",
         link: "https://www.docker.com/"
     },
-    {name:"",description:"",link:"",icon:<></>},
+    {
+        name:"LangChain",
+        description:"LLM Framework for building applications with large language models.",
+        link:"https://www.langchain.com/",
+        icon:<SiLangchain size={logoSize}/>
+    },
+
     {name:"",description:"",link:"",icon:<></>},
     
     {name:"",description:"",link:"",icon:<></>},

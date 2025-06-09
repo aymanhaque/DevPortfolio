@@ -5,9 +5,10 @@ interface CardProps {
   title: string;
   description: string;
   link?: string;
+  extraComponents?: React.ReactNode[];
 }
 
-const Card: React.FC<CardProps> = ({ imgSrc, title, description, link }) => {
+const Card: React.FC<CardProps> = ({ imgSrc, title, description, link, extraComponents }) => {
   const cardContent = (
     <div className="mx-5 flex flex-col bg-zinc-900/70 rounded-2xl shadow-lg w-80 h-90 border border-zinc-800 hover:scale-105 transition-transform duration-200 overflow-hidden">
       {/* Image covers 2/5 of the card */}
@@ -20,8 +21,11 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, description, link }) => {
       </div>
       {/* Content container */}
       <div className="flex flex-col items-center justify-center h-3/5 p-8">
-        <h2 className="text-2xl font-semibold text-neutral-100 text-center mb-3">
-          {title}
+        <h2 className="text-2xl font-semibold text-neutral-100 text-center mb-3 flex items-center">
+          {title} <span className="mx-2 text-gray-600">|</span>
+          {extraComponents && extraComponents.map((comp, idx) => (
+            <span key={idx} className="mx-1 text-zinc-500">{comp}</span>
+          ))}
         </h2>
         {/* Scrollable description container */}
         <div className="overflow-y-auto" style={{ maxHeight: "calc(100% - 3rem)" }}>
