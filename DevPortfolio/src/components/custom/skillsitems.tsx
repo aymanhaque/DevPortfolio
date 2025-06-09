@@ -10,28 +10,8 @@ const skillItems = [
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-
     
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
+
     {
         icon: <FaPython size={logoSize}/>,
         name: "Python",
@@ -98,32 +78,8 @@ const skillItems = [
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
     {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
 
-
-
-
-
-    
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
+   
 
 ];
 

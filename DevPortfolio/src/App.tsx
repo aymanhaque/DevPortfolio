@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className='w-full mx-auto mt-110'>
+      <div className='w-full mt-110'>
         <div className='max-w-screen-2xl mx-auto'>
         <About/>
         </div>

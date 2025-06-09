@@ -56,11 +56,18 @@ const Box: React.FC<{ children: React.ReactNode; name: string; description: stri
     );
 }
 
+// Arrow function that returns twenty empty boxes
+const renderEmptyBoxes = () => 
+  Array.from({ length: 20 }, (_, idx) => (
+    <Box name="" description="" link="" key={idx}>
+      <></>
+    </Box>
+  ));
 
 
 const Skills: React.FC = () => {
     return (
-        <div className='mt-130 w-full'>
+        <div className='mt-130 w-'>
             <h1 className='text-7xl text-neutral-200 flex justify-center mb-5'>Skills</h1>
             {/* Boxes container with vertical fading effect */}
             <div 
@@ -70,6 +77,7 @@ const Skills: React.FC = () => {
                 WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)"
               }}
             >
+                {renderEmptyBoxes()}
                 {skillItems.map((item) => (
                     <Box
                         name={item.name}
@@ -79,6 +87,7 @@ const Skills: React.FC = () => {
                         {item.icon}
                     </Box>
                 ))}
+                {renderEmptyBoxes()}
             </div>
 
             
