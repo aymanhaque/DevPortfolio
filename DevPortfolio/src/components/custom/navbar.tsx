@@ -3,6 +3,13 @@ import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from '../ui/button';
 
+const handleScroll = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
+
 const border = () => {
     return (
         <div className="border-1 border-gray-600 h-6 "></div>
@@ -19,17 +26,17 @@ const Navbar = () => {
                     </Button>
                 </div>
                 <div className='justify-end flex w-full items-center'>
-                    <Button variant ="color"asChild>
-                        <a href="">About</a>
+                    <Button variant="color" asChild>
+                        <a href="#about" onClick={(e) => { e.preventDefault(); handleScroll("about"); }}>About</a>
                     </Button>
-                    <Button variant ="color"asChild>
-                        <a href="">Skills</a>
+                    <Button variant="color" asChild>
+                        <a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll("skills"); }}>Skills</a>
                     </Button>
-                    <Button variant ="color"asChild>
-                        <a href="">Projects</a>
+                    <Button variant="color" asChild>
+                        <a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll("projects"); }}>Projects</a>
                     </Button>
-                    <Button variant ="color"asChild>
-                        <a href="">Contact</a>
+                    <Button variant="color" asChild>
+                        <a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll("contact"); }}>Contact</a>
                     </Button>
                     {/* {border()}
                     <a className=" text-neutral-300 hover:text-indigo-400 transition-colors duration-300 px-3" href="">
