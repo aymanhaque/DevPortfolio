@@ -36,7 +36,7 @@ const About: React.FC = () => {
                     />
                 </div>
                 <img
-                    src="https://media.licdn.com/dms/image/v2/C4E03AQHWrgOaaqCbWQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1652730550426?e=1754524800&v=beta&t=B1E9nSFw8Q_qHqBVyXLbhI0a6tRQ97PYBeWQN4TmS50"
+                    src="https://media.licdn.com/dms/image/v2/C4E03AQHWrgOaaqCbWQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1652730550426?e=1759968000&v=beta&t=XackepK0PXRCZys9mLzXjt-aolE_zaSPFFEX-Y5yFL0"
                     alt="Muhd Haque"
                     className="w-80 h-80 rounded-full object-cover shadow-lg relative left-5"
                 />
