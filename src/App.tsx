@@ -14,7 +14,7 @@ function App() {
         <div id="about" className='max-w-screen-2xl mx-auto'>
           <About/>
         </div>
-        <div id="skills">
+        <div className='w-full' id="skills">
           <Skills/>
         </div>
         <div id="projects" className='max-w-screen-2xl mx-auto'>
@@ -22,7 +22,6 @@ function App() {
         </div>
         <div id="contact" className='max-w-screen-2xl mx-auto my-10'>
           <Contact/>
-          {/* ...insert contact details or form here... */}
         </div>
       </div>
     </>

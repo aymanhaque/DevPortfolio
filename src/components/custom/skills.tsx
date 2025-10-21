@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import skillItems from './skillsitems';
 
 import {
@@ -8,46 +8,33 @@ import {
 } from "@/components/ui/hover-card"
 
 
-const Box: React.FC<{ children: React.ReactNode; name: string; description: string; link: string }> = ({ children, name, description, link }) => {
-    const isEmptyIcon = name === "";
-    if (isEmptyIcon) {
-      return (
-        <div className='w-20 aspect-square rounded-md bg-zinc-900 text-neutral-200 flex 
-                        justify-center items-center border-1 border-zinc-600 m-5 hover:scale-90 transition-transform duration-300'>
-          {/* Added glow effect to logo */}
-          <div className="drop-shadow-[0_0_4px_rgba(255,255,255,0.5)]">
-            {children}
-          </div>
-        </div>
-      );
-    }
-    
+const Box: React.FC<{ children: React.ReactNode; name: string; description: string; link: string }> = ({ 
+  children, name, description, link
+}) => {
     return (
         <HoverCard>
             <HoverCardTrigger asChild>
                 {link ? (
-                  <a href={link} target="_blank" rel="noopener noreferrer">
+                  <a href={link} target="_blank" rel="noopener noreferrer" className="block">
                     <div className='w-20 aspect-square rounded-md bg-zinc-900 text-neutral-200 flex 
-                                justify-center items-center hover:scale-110 duration-300
-                                border-1 border-zinc-600 m-5 shadow hover:shadow-xl hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]'>
-                      {/* Added glow effect to logo */}
-                      <div className="drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]">
+                                justify-center items-center hover:scale-105 transition-transform duration-200 ease-out
+                                border-1 border-zinc-600 m-2 mx-auto shadow'>
+                      <div>
                         {children}
                       </div>
                     </div>
                   </a>
                 ) : (
                   <div className='w-20 aspect-square rounded-md bg-zinc-900 text-neutral-200 flex 
-                                justify-center items-center hover:scale-110 duration-300
-                                border-1 border-zinc-600 m-5 shadow hover:shadow-xl hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]'>
-                    {/* Added glow effect to logo */}
-                    <div className="drop-shadow-[0_0_4px_rgba(255,255,255,0.5)]">
+                                justify-center items-center hover:scale-105 transition-transform duration-200 ease-out
+                                border-1 border-zinc-600 m-2 mx-auto shadow'>
+                    <div>
                       {children}
                     </div>
                   </div>
                 )}
             </HoverCardTrigger>
-            <HoverCardContent>
+            <HoverCardContent sideOffset={10} className="z-50">
                 <div className='text-zinc-400'>
                   {name} – {description}.
                 </div>
@@ -56,41 +43,28 @@ const Box: React.FC<{ children: React.ReactNode; name: string; description: stri
     );
 }
 
-// Arrow function that returns twenty empty boxes
-const renderEmptyBoxes = () => 
-  Array.from({ length: 20 }, (_, idx) => (
-    <Box name="" description="" link="" key={idx}>
-      <></>
-    </Box>
-  ));
-
-
 const Skills: React.FC = () => {
+    // Filter out only the actual skill items (non-empty ones)
+    const actualSkills = useMemo(() => 
+      skillItems.filter(item => item.name !== ""), 
+    []);
+    
     return (
-        <div className='mt-130 w-'>
-            <h1 className='text-7xl text-neutral-200 flex justify-center mb-5'>Skills</h1>
-            {/* Boxes container with vertical fading effect */}
-            <div 
-              className='flex flex-wrap w-full gap-x-1 gap-y-8 justify-center '
-              style={{
-                maskImage: "linear-gradient(to bottom, transparent, black 50%, black 50%, transparent)",
-                WebkitMaskImage: "linear-gradient(to bottom, transparent, black 40%, black 20%, transparent)"
-              }}
-            >
-                {renderEmptyBoxes()}
-                {skillItems.map((item) => (
-                    <Box
-                        name={item.name}
-                        description={item.description}
-                        link={item.link}
-                    >
-                        {item.icon}
-                    </Box>
-                ))}
-                {renderEmptyBoxes()}
-            </div>
-
+        <div className='mt-130 w-full'>
+            <h1 className='text-7xl text-neutral-200 flex justify-center mb-8'>Skills</h1>
             
+            <div className="flex flex-wrap justify-center gap-x-30 gap-y-10 w-full max-w-4xl mx-auto mb-100">
+                {actualSkills.map((skill, idx) => (
+                  <Box
+                    key={idx}
+                    name={skill.name}
+                    description={skill.description}
+                    link={skill.link}
+                  >
+                    {skill.icon}
+                  </Box>
+                ))}
+            </div>
         </div>
     );
 };

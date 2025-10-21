@@ -1,5 +1,5 @@
 import React from "react";
-
+import { ScrollArea } from "../ui/scroll-area";
 interface CardProps {
   imgSrc: string;
   title: string;
@@ -10,9 +10,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imgSrc, title, description, link, extraComponents }) => {
   const cardContent = (
-    <div className="mx-5 flex flex-col bg-zinc-900/70 rounded-2xl shadow-lg w-80 h-90 border border-zinc-800 hover:scale-105 transition-transform duration-200 overflow-hidden">
+    <div className="flex flex-col bg-zinc-900/70 rounded-2xl  w-80 h-90 border border-zinc-800 overflow-hidden">
       {/* Image covers 2/5 of the card */}
-      <div className="w-full h-2/5 bg-white">
+      <div className="w-full h-2/5 bg-white"> 
         <img
           src={imgSrc}
           alt={title}
@@ -27,12 +27,12 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, description, link, extraComp
             <span key={idx} className="mx-1 text-zinc-500">{comp}</span>
           ))}
         </h2>
-        {/* Scrollable description container */}
-        <div className="overflow-y-auto" style={{ maxHeight: "calc(100% - 3rem)" }}>
-          <p className="text-zinc-400 text-center text-base">
+        {/* Scrollable description container using ScrollArea */}
+        <ScrollArea className="w-full" style={{ height: "calc(100% - 3rem)" }}>
+          <p className="text-zinc-400 text-center text-base px-1">
             {description}
           </p>
-        </div>
+        </ScrollArea>
       </div>
     </div>
   );
@@ -42,11 +42,12 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, description, link, extraComp
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      className="inline-block hover:scale-105 transition-transform duration-200"
     >
       {cardContent}
     </a>
   ) : (
-    cardContent
+    <div className="inline-block">{cardContent}</div>
   );
 };
 
