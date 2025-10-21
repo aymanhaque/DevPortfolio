@@ -1,21 +1,15 @@
 import { FaPython,FaReact,FaNode, FaJava, FaDocker} from 'react-icons/fa';
-import { SiExpress, SiFlask, SiLangchain, SiMongodb, SiSpringboot } from 'react-icons/si';
+import { SiExpress, SiFlask, SiLangchain, SiMongodb, SiSpringboot, SiKubernetes, SiDatadog } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
 const logoSize = 40; // Size for the icons
 
 const skillItems = [
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-
-
     {
         icon: <SiExpress size={logoSize}/>,
         name: "ExpressJS",
         description: "Lightweight javascript web framework for building server side applications.",
-        link: "https://www.python.org/"
+        link: "https://expressjs.com/"
     },
     
 
@@ -80,20 +74,23 @@ const skillItems = [
         link: "https://www.docker.com/"
     },
     {
+        icon: <SiKubernetes size={logoSize}/>,
+        name: "Kubernetes",
+        description: "An open source container orchestration platform for automating deployment, scaling, and management of containerized applications.",
+        link: "https://kubernetes.io/"
+    },
+    {
+        icon: <SiDatadog size={logoSize}/>,
+        name: "Datadog",
+        description: "Observability and Cloud Monitoring platform for cloud-deployed applications and infrastructure.",
+        link: "https://www.datadog.com/"
+    },
+    {
         name:"LangChain",
         description:"LLM Framework for building applications with large language models.",
         link:"https://www.langchain.com/",
         icon:<SiLangchain size={logoSize}/>
-    },
-
-    {name:"",description:"",link:"",icon:<></>},
-    
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-    {name:"",description:"",link:"",icon:<></>},
-
-   
-
+    }
 ];
 
 export default skillItems;
